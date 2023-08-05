@@ -1,0 +1,402 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap');
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: hsl(205, 78%, 60%);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --ff-primary: 'Roboto', sans-serif;
+  --ff-secondary: 'Open Sans', sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+/* --------------------------------------------------------------------------------- */
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-secondary);
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+  position: relative;
+  left: 10px;
+  letter-spacing: 1px;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin: -10px; 
+  color: var(--clr-grey-5);
+  margin-top: 20px;
+  position: relative;
+  left:-120px;
+  font-size: 0.7rem;
+  word-spacing: 2px;
+  letter-spacing: 1.5px;
+}
+
+/* Decorate button */
+.custom-button{
+  font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    background-color: red;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+
+}
+
+
+/* Background color */
+body {
+   background-image: url('background.png');/* Replace 'background.jpg' with the actual image path */
+  background-repeat: no-repeat;
+  background-size: cover; /* Adjust the background-size property as needed */
+  /* border-left: 50px; */
+}
+
+.hire{ 
+  width: 600px;
+  float:right;
+  margin: 100px;
+}
+
+.fcareer{
+  color:rgb(199, 199, 25);
+}
+
+.cv{
+  font-family: 'Roboto', sans-serif;
+  color: white; /* Set the text color to white */
+  border: 1px solid white; /* Add a white thin border */
+  padding: 8px 15px; /* Add some padding for better visual appearance */
+  border-radius: 4px; /* Optional - add border radius for rounded corners */
+  background-color: transparent;
+  margin-top: 20px;
+
+}
+
+
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+
+
+/* global classes */
+/* section */
+.section {
+  padding: 5rem 0;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+/* ------------------------------------------------------------------------------ */
+/*
+=============== 
+Navbar
+===============
+*/
+nav {
+  background: var(--clr-white);
+  box-shadow: var(--light-shadow);
+  /* ///////////////////////////// */
+  display:flex;
+  align-items: center;
+  /* ///////////////////////////////// */
+}
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-right: 190px;
+}
+.nav-toggle {
+  font-size: 1.5rem;
+  color: var(--clr-primary-5);
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.nav-toggle:hover {
+  color: var(--clr-primary-1);
+  transform: rotate(90deg);
+}
+.logo {
+  height: 40px;
+  
+
+}
+.links a {
+  color: var(--clr-grey-3);
+  font-size: 13px;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  padding: 0.5rem 1.5rem; /* Increase the padding to add more space between buttons */
+  margin-right: 30px; /* Adjust this value to add more space between buttons */
+  transition: var(--transition);
+}
+
+
+
+.links a:last-child {
+  margin-right: 1.44rem; /* Remove margin from the last button to avoid extra spacing */
+}
+/* .links a:hover {
+  background: var(--clr-primary-8);
+  color: var(--clr-primary-5);
+  padding-left: 1.5rem;
+} */
+/* Add underline and red color animation to links on hover */
+a:hover {
+  position: relative;
+  text-decoration: none;
+}
+
+a:hover::after {
+  content: '';
+  position: absolute;
+  left: 50%; /* Start the animation from the middle */
+  bottom: -10px; /* Adjust the position to place the line below the text */
+  width: 0;
+  height: 2px;
+  background-color: red;
+  animation: underlineAnimation 3s infinite; /* Apply the animation */
+}
+
+@keyframes underlineAnimation {
+  0%, 100% {
+    left: 50%;
+    width: 0;
+  }
+  25%, 75% {
+    left: 0;
+    width: 100%;
+  }
+}
+.custom-button a {
+  color: white;
+}
+/* Add underline and red color animation to links on hover */
+.custom-button a:hover {
+  position: relative;
+  text-decoration: none;
+}
+
+.custom-button a:hover::after {
+  content: '';
+  position: absolute;
+  left: 50%; /* Start the animation from the middle */
+  bottom: -10px; /* Adjust the position to place the line below the text */
+  width: 0;
+  height: 2px;
+  background-color: black;
+  animation: underlineAnimation 3s infinite; /* Apply the animation */
+}
+
+@keyframes underlineAnimation {
+  0%, 100% {
+    left: 50%;
+    width: 0;
+  }
+  25%, 75% {
+    left: 0;
+    width: 100%;
+  }
+}
+
+.links {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+  /*  //////////////////////// */
+  display: flex;
+  align-items: center; 
+  margin-right: 20px;
+  /* //////////////////////////////// */
+}
+.show-links {
+  height: 12.5rem;
+}
+
+
+  .nav-center {
+    max-width: 1170px;
+    margin-left: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.4rem;
+    
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .links {
+    height: auto;
+    display: flex;
+
+  }
+  .links a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+  .links a:hover {
+    padding: 0;
+    background: transparent;
+  }
+  .social-icons {
+    display: flex;
+  }
+  .social-icons a {
+    margin: 0 0.5rem;
+    color: var(--clr-primary-5);
+    transition: var(--transition);
+  }
+  .social-icons a:hover {
+    color: var(--clr-primary-7);
+  }
+
+
+/* front */
+.front{
+  text-align: center;
+  margin-top: 200px;
+  color: white;
+  padding: 50px 20px;
+  
+}
+.front h4 {
+  margin-left: -28.6%;
+}
+
+.front h5 {
+  margin: 10px 6.8%;
+  text-align: left;
+  font-size: 15px;
+}
+.front h3 {
+  margin: 10px 6%;
+  text-align: left;
+  font-size: 50px;
+}
+
+.cv {
+  margin-top: 20px; 
+  margin-left: -27.6%;
+  
+}
